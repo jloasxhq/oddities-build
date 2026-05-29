@@ -15,6 +15,7 @@ import Navbar from "./components/Navbar";
 import { SignUpModal } from "./components/Modal";
 import HomePage from "./pages/Home";
 import AdminPage from "./pages/Admin";
+import GodEngine from "./components/GodEngine";
 import Footer from "./components/Footer";
 
 function App() {
@@ -41,6 +42,10 @@ function App() {
         <SignUpModal />
         <Routes>
           <Route path={import.meta.env.BASE_URL} Component={HomePage} />
+          <Route
+            path={import.meta.env.BASE_URL + "godengine"}
+            Component={GodEngine}
+          />
           <Route
             exact
             path={import.meta.env.BASE_URL + "admin"}
